@@ -6,7 +6,7 @@ console.log(Date.now());
 
 
 function getDate(string){
-    let [_, month, day, year] = /(\d{1,2})-(\d{1,2})-(\d{4})/.exec(string);
+    let [_, month, day, year] = /^(\d{1,2})-(\d{1,2})-(\d{4})$/.exec(string);
     console.log(month, day, year);
 
     return new Date(year, month-1, day);
